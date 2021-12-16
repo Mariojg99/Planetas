@@ -4,63 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:wght@200&display=swap" rel="stylesheet">
     <title>Planetas</title>
 </head>
 <body>
-    <h1>Ejercicio sobre los planetas</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>N° de Planetas</th>
-                <th>Planeta</th>
-                <th>Distancia (años Luz)</th>
-                <th>Tamaño</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><input type="number" id="n_planeta_1" class="numeracion_planetas planeta1"></td>
-                <td><input type="text" id="np_planeta_1" class="nombre_planetas planeta1"></td>
-                <td><input type="number" id="d_planeta_1" class="distancia_planetas planeta1"></td>
-                <td><input type="number" id="t_planeta_1" class="tamanio_planetas planeta1"></td>
-            </tr>
-            <tr>
-                <td><input type="number" id="n_planeta_2" class="numeracion_planetas planeta2"></td>
-                <td><input type="text" id="np_planeta_2" class="nombre_planetas planeta2"></td>
-                <td><input type="number" id="d_planeta_2" class="distancia_planetas planeta2"></td>
-                <td><input type="number" id="t_planeta_2" class="tamanio_planetas planeta2"></td>
-            </tr>
-            <tr>
-                <td><input type="number" id="n_planeta_3" class="numeracion_planetas planeta3"></td>
-                <td><input type="text" id="np_planeta_3" class="nombre_planetas planeta3"></td>
-                <td><input type="number" id="d_planeta_3" class="distancia_planetas planeta3"></td>
-                <td><input type="number" id="t_planeta_3" class="tamanio_planetas planeta3"></td>
-            </tr>
-            <tr>
-                <td><input type="number" id="n_planeta_4" class="numeracion_planetas planeta4"></td>
-                <td><input type="text" id="np_planeta_4" class="nombre_planetas planeta4"></td>
-                <td><input type="number" id="d_planeta_4" class="distancia_planetas planeta4"></td>
-                <td><input type="number" id="t_planeta_4" class="tamanio_planetas planeta4"></td>
-            </tr>
-            <tr>
-                <td><input type="number" id="n_planeta_5" class="numeracion_planetas planeta5"></td>
-                <td><input type="text" id="np_planeta_5" class="nombre_planetas planeta5"></td>
-                <td><input type="number" id="d_planeta_5" class="distancia_planetas planeta5"></td>
-                <td><input type="number" id="t_planeta_5" class="tamanio_planetas planeta5"></td>
-            </tr>
-        </tbody>
-    </table>
 
     <div class="container">
+        <h1>Sistema Solar</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Planeta</th>
+                    <th>Distancia (años Luz)</th>
+                    <th>Tamaño</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" id="n_planeta_1" class="numeracion_planetas planeta1" value = 1 disabled></td>
+                    <td><input type="text" id="np_planeta_1" class="nombre_planetas planeta1"></td>
+                    <td><input type="number" id="d_planeta_1" class="distancia_planetas planeta1"></td>
+                    <td><input type="number" id="t_planeta_1" class="tamaño_planetas planeta1"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="n_planeta_2" class="numeracion_planetas planeta2" value = 2 disabled></td>
+                    <td><input type="text" id="np_planeta_2" class="nombre_planetas planeta2"></td>
+                    <td><input type="number" id="d_planeta_2" class="distancia_planetas planeta2"></td>
+                    <td><input type="number" id="t_planeta_2" class="tamanio_planetas planeta2"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="n_planeta_3" class="numeracion_planetas planeta3" value = 3 disabled></td>
+                    <td><input type="text" id="np_planeta_3" class="nombre_planetas planeta3"></td>
+                    <td><input type="number" id="d_planeta_3" class="distancia_planetas planeta3"></td>
+                    <td><input type="number" id="t_planeta_3" class="tamanio_planetas planeta3"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="n_planeta_4" class="numeracion_planetas planeta4" value = 4 disabled></td>
+                    <td><input type="text" id="np_planeta_4" class="nombre_planetas planeta4"></td>
+                    <td><input type="number" id="d_planeta_4" class="distancia_planetas planeta4"></td>
+                    <td><input type="number" id="t_planeta_4" class="tamanio_planetas planeta4"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="n_planeta_5" class="numeracion_planetas planeta5" value = 5 disabled></td>
+                    <td><input type="text" id="np_planeta_5" class="nombre_planetas planeta5"></td>
+                    <td><input type="number" id="d_planeta_5" class="distancia_planetas planeta5"></td>
+                    <td><input type="number" id="t_planeta_5" class="tamanio_planetas planeta5"></td>
+                </tr>
+            </tbody>
+        </table>
 
-        <button id="btn_enviar_evaluacion" class="item">Enviar</button>
-        <button id="btn_ordenar_valores" class="item">Ordenar Valores</button>
-        <button id="btn_filtrar_distancia" class="item">Filtrar</button>
-        <button id="btn_buscar_planeta" class="item">Buscar</button>
+        <div class="btn_container">
+
+            <div class="btn">
+                <button id="btn_enviar_evaluacion" class="item">Enviar</button>
+            </div>
+            <div class="btn">
+                <button id="btn_ordenar_valores" class="item">Ordenar Valores</button>
+            </div>
+            <div class="btn">
+                <button id="btn_filtrar_distancia" class="item">Filtrar</button>
+            </div>
+            <div class="btn">
+                <button id="btn_buscar_planeta" class="item">Buscar</button>
+            </div>        
+
+        </div>
 
     </div>
+    
 
-    <script src="./js/script.js"></script>
+    <script src="./js/planetas.js"></script>
 </body>
 </html>
