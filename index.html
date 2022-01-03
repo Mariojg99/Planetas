@@ -1,81 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Planetas</title>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Sistema Solar</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>N°</th>
-                    <th>Planeta</th>
-                    <th>Distancia (años Luz)</th>
-                    <th>Tamaño</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="number" id="n_planeta_1" class="numeracion_planetas planeta1" value = 1 disabled></td>
-                    <td><input type="text" id="np_planeta_1" class="nombre_planetas planeta1"></td>
-                    <td><input type="number" id="d_planeta_1" class="distancia_planetas planeta1"></td>
-                    <td><input type="number" id="t_planeta_1" class="tamaño_planetas planeta1"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="n_planeta_2" class="numeracion_planetas planeta2" value = 2 disabled></td>
-                    <td><input type="text" id="np_planeta_2" class="nombre_planetas planeta2"></td>
-                    <td><input type="number" id="d_planeta_2" class="distancia_planetas planeta2"></td>
-                    <td><input type="number" id="t_planeta_2" class="tamanio_planetas planeta2"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="n_planeta_3" class="numeracion_planetas planeta3" value = 3 disabled></td>
-                    <td><input type="text" id="np_planeta_3" class="nombre_planetas planeta3"></td>
-                    <td><input type="number" id="d_planeta_3" class="distancia_planetas planeta3"></td>
-                    <td><input type="number" id="t_planeta_3" class="tamanio_planetas planeta3"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="n_planeta_4" class="numeracion_planetas planeta4" value = 4 disabled></td>
-                    <td><input type="text" id="np_planeta_4" class="nombre_planetas planeta4"></td>
-                    <td><input type="number" id="d_planeta_4" class="distancia_planetas planeta4"></td>
-                    <td><input type="number" id="t_planeta_4" class="tamanio_planetas planeta4"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="n_planeta_5" class="numeracion_planetas planeta5" value = 5 disabled></td>
-                    <td><input type="text" id="np_planeta_5" class="nombre_planetas planeta5"></td>
-                    <td><input type="number" id="d_planeta_5" class="distancia_planetas planeta5"></td>
-                    <td><input type="number" id="t_planeta_5" class="tamanio_planetas planeta5"></td>
-                </tr>
-            </tbody>
-        </table>
+    <main>
 
-        <div class="btn_container">
+        <div class="container-fluid">
 
-            <div class="btn">
-                <button id="btn_enviar_evaluacion" class="item">Enviar</button>
-            </div>
-            <div class="btn">
-                <button id="btn_ordenar_valores" class="item">Ordenar Valores</button>
-            </div>
-            <div class="btn">
-                <button id="btn_filtrar_distancia" class="item">Filtrar</button>
-            </div>
-            <div class="btn">
-                <input type="search" name="" id="inputBuscar">
-                <button id="btn_buscar_planeta" class="item">Buscar</button>
-            </div>        
-
+            <section id="section-formulario-registro">
+                <div class="container-form container-fluid">
+                    <h1>App de sistema solar</h1>
+    
+                    <!-- formulario de registro -->
+                    <form action="" id="registro-planetas-form">
+                        <div class="row">
+    
+                            <!-- campo nombre -->
+                            <div class="col-3">
+                                <label for="nombrePlaneta" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombrePlaneta">
+                            </div>
+    
+                            <!-- campo dstancia -->
+                            <div class="col-3">
+                                <label for="distanciaPlaneta" class="form-label">Distancia (UA)</label>
+                                 <input type="number" class="form-control" name="distancia" id="distanciaPlaneta">
+                            </div>
+    
+                            <!-- campo tamaño -->
+                            <div class="col-3">
+                                <label for="tamañoPlaneta" class="form-label">Tamaño</label>
+                                <input type="number" class="form-control" name="tamaño" id="tamañoPlaneta">
+                            </div>
+    
+                            <!-- boton agregar -->
+                            <div class="col-3">
+                                <button class="btn btn-primary" id="btnAgregar">Agregar</button>
+                            </div>
+    
+                        </div>
+                    </form>
+                </div>
+            </section>
+    
+            <section id="section-options-table">
+                <div class="container-options container-fluid">
+                    <h2>Tabla de planetas</h2>
+                    <form action="" id="table-options">
+    
+                        <div class="row">
+                            
+                            <!-- opcion buscar -->
+                            <div class="col-3">
+                                <div class="input-group mb-1">
+                                    <input type="search" class="form-control" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="button-addon2" id="inputBuscar">
+                                    <button class="btn btn-primary btn-buscar" type="button" id="btnBuscar">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                            <!-- opcion ordenar -->
+                              <div class="col-6">
+                                  <div class="form-group row">
+                                      <label for="select-ordenar" class="form-label col-form-label col-sm-3" id="label-select">Ordenar por</label>
+                                      <div class="col-6">
+                                          <select class="form-select col" aria-label="Default select example" id="select-ordenar">
+                                              <option selected disabled>Seleccionar</option>
+                                              <option value="1">Nombre</option>
+                                              <option value="2">Distancia</option>
+                                              <option value="3">Tamaño</option>
+                                            </select>
+                                      </div>
+                                  </div>
+                              </div>
+    
+                        </div>
+                    </form>
+                </div>
+                <div id="busqueda"></div>
+            </section>
+    
+            <section id="section-tabla-planetas">
+                <div class="container-table container-fluid" id="listar">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Distancia (UA)</th>
+                            <th scope="col">Tamaño</th>
+                          </tr>
+                        </thead>
+                        <tbody id="listarPlaneta">
+                        </tbody>
+                      </table>
+    
+                </div>
+            </section>
         </div>
 
-    </div>
+        
+    </main>
+
+    
     
 
-    <script src="./js/planetas.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
